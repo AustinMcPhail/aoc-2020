@@ -99,10 +99,16 @@ export const dayThree = (DEBUG = false, dataPath: string) => {
   for (const slope of slopes) {
     let treeCount = 0;
     let currentX = 0;
-    for (const [index, line] of lines.entries()) {
+    for (
+      let index = 0;
+      index < lines.length;
+      index += (index + slope.down) > lines.length
+        ? (index + slope.down) - lines.length
+        : slope.down
+    ) {
       let x = currentX + slope.right;
-      if (x > line.length - 1) {
-        x = x - line.length;
+      if (x > lines[index].length - 1) {
+        x = x - lines[index].length;
       }
       if (lines[index + slope.down] && lines[index + slope.down][x] === "#") {
         treeCount++;
