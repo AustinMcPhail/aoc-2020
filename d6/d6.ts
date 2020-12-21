@@ -137,6 +137,8 @@ export const daySix = (DEBUG = false, dataPath: string) => {
 
   answers.push(yesCount);
   if (DEBUG) console.log(`Answer to Day 6, part two: `, yesCount);
+
+  return answers;
 };
 
 const unique = (value: string, index: number, self: string[]) => {
