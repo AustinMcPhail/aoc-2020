@@ -5,6 +5,7 @@ import { dayThree } from "./d3/d3.ts";
 import { dayFour } from "./d4/d4.ts";
 import { dayFive } from "./d5/d5.ts";
 import { daySix } from "./d6/d6.ts";
+import { daySeven } from "./d7/d7.ts";
 
 const DEBUG = parse(Deno.args).d || Boolean(parse(Deno.args).debug);
 
@@ -28,5 +29,8 @@ switch (DAY) {
     break;
   case 6:
     daySix(DEBUG, "./d6/data.txt");
+    break;
+  case 7:
+    daySeven(DEBUG, "./d7/data.txt");
     break;
 }
