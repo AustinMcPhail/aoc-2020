@@ -90,6 +90,8 @@ export const dayFive = (DEBUG = false, dataPath: string) => {
 
   answers.push(highestPassId);
   if (DEBUG) console.log(`Answer to Day 5, part two: `, myPassId);
+
+  return answers;
 };
 
 const getRow = (pass: string): number => {

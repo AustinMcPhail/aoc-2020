@@ -231,6 +231,8 @@ export const dayFour = (DEBUG = false, dataPath: string) => {
   if (DEBUG) {
     console.log(`Answer to Day 4, part two: `, validatedPassportInputs.length);
   }
+
+  return answers;
 };
 
 const toObject = (input: string) => {
